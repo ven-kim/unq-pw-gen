@@ -1,4 +1,4 @@
-# Password Generator Starter Code
+# Password Generator
 
 ## Description
 Created a password generator app that runs through the browser while featuring dynamically updated HTML and CSS powered by JavaScript code that I have written.
