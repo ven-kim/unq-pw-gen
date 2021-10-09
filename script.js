@@ -29,9 +29,57 @@ function determineLength() {
     return passwordLength;
 }
 
+// Function used to determine whether the use wants to include uppercase characters in the password
+function determineUppercase() {
+  uppercaseCheck = prompt("Do you want to include uppercase letters in your password \n(Yes or No)");
+    uppercaseCheck = uppercaseCheck.toLowerCase();
+
+    if (uppercaseCheck === null || uppercaseCheck === "") {
+      alert("Please answer Yes or No");
+      determineUppercase();
+    } else if (uppercaseCheck === "yes" || uppercaseCheck === "y") {
+      uppercaseCheck = true;
+      return uppercaseCheck;
+    } else if (uppercaseCheck === "no" || uppercaseCheck === "n") {
+      uppercaseCheck = false;
+      return uppercaseCheck;
+    } else {
+      alert("Please answer Yes or No");
+      determineUppercase();
+    }
+
+    return uppercaseCheck;
+}
+
+// Function used to determine whether the user wants to include numbers in the password
+function determineNumbers() {
+  numberCheck = prompt("Do you want to include numbers in your password \n(Yes or No)");
+    numberCheck = numberCheck.toLowerCase();
+
+    if (numberCheck === null || numberCheck === "") {
+      alert("Please answer Yes or No");
+      determineNumbers();
+    } else if (numberCheck === "yes" || numberCheck === "y") {
+      numberCheck = true;
+      return numberCheck;
+    } else if (numberCheck === "no" || numberCheck === "n") {
+      numberCheck = false;
+      return numberCheck;
+    } else {
+      alert("Please answer Yes or No");
+      determineNumbers();
+    }
+
+    return numberCheck;
+}
+
 function generatePassword() {
   determineLength();
     console.log(passwordLength);
+  determineUppercase();
+    console.log(uppercaseCheck);
+  determineNumbers();
+    console.log(numberCheck);
 }
 
 // Write password to the #password input
