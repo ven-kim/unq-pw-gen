@@ -12,7 +12,7 @@ The app will randomly generate a password that meets certain criterias that will
 
 ## Application Link
 
-
+https://ven-kim.github.io/unq-pw-gen/
 
 ## Application Screenshot
 
